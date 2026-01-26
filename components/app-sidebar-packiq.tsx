@@ -1,0 +1,211 @@
+"use client"
+
+import { PackIQLogoIcon } from "@/components/PackIQLogoIcon";
+
+
+import * as React from "react"
+import {
+  AudioWaveform,
+  BookOpen,
+  Bot,
+  Command,
+  Frame,
+  GalleryVerticalEnd,
+  Map,
+  PieChart,
+  Settings2,
+  SquareTerminal,
+  Database,
+  Newspaper,
+  Settings,
+  UserStar,
+  ShieldUser,
+} from "lucide-react"
+
+import { NavMain } from "@/components/nav-main"
+import { NavProjects } from "@/components/nav-projects"
+import { NavUser } from "@/components/nav-user"
+import { TeamSwitcher } from "@/components/team-switcher"
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarRail,
+} from "@/components/ui/sidebar"
+import { NavMainPackIQ } from "./nav-main-packiq"
+
+// This is sample data.
+const data = {
+  user: {
+    name: "Pack-IQ Admin",
+    email: "admin@packiq.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
+
+  // Pack-IQ name logo
+
+  teams: [
+    {
+      name: "Pack-IQ",
+      logo: PackIQLogoIcon,
+      //logo: GalleryVerticalEnd,
+      plan: "EPR Compliance Platform",
+    },
+    {
+      name: "Acme Corp.",
+      logo: AudioWaveform,
+      plan: "Startup",
+    },
+    {
+      name: "Evil Corp.",
+      logo: Command,
+      plan: "Free",
+    },
+  ],
+  navMain: [
+    {
+      title: "Data Management",
+      url: "#",
+      //icon: SquareTerminal,
+      icon:Database,
+      isActive: true,
+      items: [
+        {
+          title: "Data Dashboard",
+          url: "#",
+        },
+        {
+          title: "Upload Center",
+          url: "#",
+        },
+        {
+          title: "Extraction Review",
+          url: "#",
+        },
+                {
+          title: "Data Completeness",
+          url: "#",
+        },
+                        {
+          title: "Sales Management",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Compliance",
+      url: "#",
+      //icon: Bot,
+      icon:Newspaper,
+      items: [
+        {
+          title: "Compliance Dashboard",
+          url: "#",
+        },
+        {
+          title: "Compliance Assistant",
+          url: "#",
+        },
+        {
+          title: "Report Builder",
+          url: "#",
+        },
+                {
+          title: "Report Review",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Administration",
+      url: "#",
+      //icon: BookOpen,
+      icon:Settings2,
+      items: [
+        {
+          title: "Admin Dashboard",
+          url: "#",
+        },
+        {
+          title: "Manage Clients",
+          url: "#",
+        },
+        {
+          title: "Regulatory Update",
+          url: "#",
+        },
+        {
+          title: "System Configuration",
+          url: "#",
+        },
+                {
+          title: "Generate Impact Report",
+          url: "#",
+        },
+                {
+          title: "Security Settings",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Executive",
+      url: "#",
+      icon: UserStar,
+      items: [
+        {
+          title: "Executive Dashboard",
+          url: "#",
+        },
+        {
+          title: "System Usage Metrics",
+          url: "#",
+        },
+        {
+          title: "User Management",
+          url: "#",
+        },
+
+      ],
+    },
+  ],
+  projects: [
+    {
+      name: "Design Engineering",
+      url: "#",
+      icon: Frame,
+    },
+    {
+      name: "Sales & Marketing",
+      url: "#",
+      icon: PieChart,
+    },
+    {
+      name: "Travel",
+      url: "#",
+      icon: Map,
+    },
+  ],
+}
+
+export function AppSidebarPackIQ({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  return (
+    <Sidebar collapsible="icon" {...props}>
+      <SidebarHeader>
+        <div className="group-data-[collapsible=icon]:hidden">
+        <PackIQLogoIcon />
+        </div>
+        { /*<TeamSwitcher teams={data.teams} />*/}
+      </SidebarHeader>
+      <SidebarContent>
+        <NavMainPackIQ items={data.navMain}/>
+        { /* <NavProjects projects={data.projects} /> */}
+      </SidebarContent>
+      <SidebarFooter>
+        <NavUser user={data.user} />
+      </SidebarFooter>
+      <SidebarRail />
+    </Sidebar>
+  )
+}
