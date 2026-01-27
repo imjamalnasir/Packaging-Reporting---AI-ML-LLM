@@ -1,6 +1,9 @@
 "use client"
 
-import { ChevronRight, type LucideIcon } from "lucide-react"
+import { usePathname } from "next/navigation"
+import { cn } from "@/lib/utils"
+
+import { ChevronRight, Link, type LucideIcon } from "lucide-react"
 
 import {
   Collapsible,
@@ -32,6 +35,10 @@ export function NavMainPackIQ({
     }[]
   }[]
 }) {
+
+
+   const pathname = usePathname()
+
   return (
     <SidebarGroup>
       {/*<SidebarGroupLabel>Platform</SidebarGroupLabel>*/}
@@ -56,9 +63,24 @@ export function NavMainPackIQ({
                   {item.items?.map((subItem) => (
                     <SidebarMenuSubItem key={subItem.title}>
                       <SidebarMenuSubButton asChild>
-                        <a href={subItem.url}>
+
+
+
+<a
+                        
+                        className={cn(
+              "rounded-md px-3 py-2 text-sm font-medium hover:bg-muted",
+              pathname === subItem.url && "bg-muted"
+            )}
+                        
+                        href={subItem.url}>
                           <span>{subItem.title}</span>
                         </a>
+
+
+                        
+
+                        
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
                   ))}

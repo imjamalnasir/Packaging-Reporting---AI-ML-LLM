@@ -19,18 +19,50 @@ export default function ChatWindow() {
   ])
   const [input, setInput] = useState("")
 
-  const sendMessage = () => {
-    if (!input.trim()) return
+const sendMessage = async () => {
+  if (!input.trim()) return
+
+  const userMessage = {
+    id: Date.now(),
+    text: input,
+    sender: "user" as const,
+  }
+
+  setMessages((prev) => [...prev, userMessage])
+  setInput("")
+
+  try {
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: input }),
+    })
+
+    const data = await res.json()
 
     setMessages((prev) => [
       ...prev,
-      { id: Date.now(), text: input, sender: "user" },
+      {
+        id: Date.now() + 1,
+        text: data.reply,
+        sender: "bot",
+      },
     ])
-    setInput("")
+  } catch (error) {
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: Date.now() + 1,
+        text: "Oops! Something went wrong.",
+        sender: "bot",
+      },
+    ])
   }
+}
 
   return (
-    <Card className="w-full max-w-md h-[500px] flex flex-col">
+    <Card className="w-full h-[550px]  flex flex-col">
+      
   <CardHeader className="border-b shrink-0">
     <div className="font-semibold">Chat</div>
   </CardHeader>
@@ -81,7 +113,7 @@ export default function ChatWindow() {
       onChange={(e) => setInput(e.target.value)}
       onKeyDown={(e) => e.key === "Enter" && sendMessage()}
     />
-    <Button onClick={sendMessage}>Send</Button>
+    <Button onClick={sendMessage} className="px-15">Send</Button>
   </CardFooter>
 </Card>
 

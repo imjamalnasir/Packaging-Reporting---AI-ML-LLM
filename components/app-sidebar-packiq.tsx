@@ -67,18 +67,18 @@ const data = {
   navMain: [
     {
       title: "Data Management",
-      url: "#",
+      url: "",
       //icon: SquareTerminal,
       icon:Database,
       isActive: true,
       items: [
         {
           title: "Data Dashboard",
-          url: "#",
+          url: "/piq-dashboard/data-dashboard",
         },
         {
           title: "Upload Center",
-          url: "#",
+          url: "/piq-dashboard/upload-center",
         },
         {
           title: "Extraction Review",
@@ -106,7 +106,7 @@ const data = {
         },
         {
           title: "Compliance Assistant",
-          url: "#",
+          url: "/piq-dashboard/compliance-assistant",
         },
         {
           title: "Report Builder",
@@ -191,6 +191,9 @@ const data = {
 }
 
 export function AppSidebarPackIQ({ ...props }: React.ComponentProps<typeof Sidebar>) {
+
+ 
+
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
