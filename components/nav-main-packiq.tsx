@@ -47,12 +47,13 @@ export function NavMainPackIQ({
           <Collapsible
             key={item.title}
             asChild
-            defaultOpen={item.isActive}
+            //defaultOpen={item.isActive}
+           // defaultOpen={true}
             className="group/collapsible"
           >
-            <SidebarMenuItem>
-              <CollapsibleTrigger asChild>
-                <SidebarMenuButton tooltip={item.title}>
+            <SidebarMenuItem >
+              <CollapsibleTrigger  asChild>
+                <SidebarMenuButton  tooltip={item.title}>
                   {item.icon && <item.icon />}
                   <span>{item.title}</span>
                   <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
@@ -66,13 +67,7 @@ export function NavMainPackIQ({
 
 
 
-<a
-                        
-                        className={cn(
-              "rounded-md px-3 py-2 text-sm font-medium hover:bg-muted",
-              pathname === subItem.url && "bg-muted"
-            )}
-                        
+                        <a     
                         href={subItem.url}>
                           <span>{subItem.title}</span>
                         </a>

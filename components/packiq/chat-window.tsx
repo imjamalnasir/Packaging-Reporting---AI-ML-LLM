@@ -61,7 +61,7 @@ const sendMessage = async () => {
 }
 
   return (
-    <Card className="w-full h-[550px]  flex flex-col">
+    <Card className="w-full h-[600px]  flex flex-col">
       
   <CardHeader className="border-b shrink-0">
     <div className="font-semibold">Chat</div>
