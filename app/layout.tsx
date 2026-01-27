@@ -36,7 +36,7 @@ export default function RootLayout({
       
     </header>
         
- 
+ Hi this is jamal from root layout
         {children}
         
       </body>

@@ -70,6 +70,7 @@ import { PlusIcon, BluetoothIcon, MoreVerticalIcon, FileIcon, FolderIcon, Folder
 export function ComponentExample() {
   return (
     <ExampleWrapper>
+      hi this is jamal from componentExample
       <CardExample />
       <FormExample />
     </ExampleWrapper>

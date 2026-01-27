@@ -20,6 +20,7 @@ import {
   Settings,
   UserStar,
   ShieldUser,
+  FileUp,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
