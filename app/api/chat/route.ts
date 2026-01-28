@@ -4,9 +4,8 @@ export const runtime = "nodejs";
 
 import { NextResponse } from "next/server"
 import { GoogleGenerativeAI } from "@google/generative-ai"
-const GOOGLE_API_KEY="AIzaSyC1NmtYxJZROuZ5rdXfKPPAJxJXV5e48RY"
-//const GOOGLE_API_KEY="AIzaSyA1qVIMRQA9Cak8EUO52MH81HTBWLaVi7I"
-const genAIKey = GOOGLE_API_KEY
+const genAIKey = ""
+//const genAIKey = GOOGLE_API_KEY
 //const genAIKey = process.env.GOOGLE_API_KEY
 const genAI = new GoogleGenerativeAI(genAIKey!)
 console.log("Loaded API Key:", genAIKey?.slice(0, 5) + "...") 
