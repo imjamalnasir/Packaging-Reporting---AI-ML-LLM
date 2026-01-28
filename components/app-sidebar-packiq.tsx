@@ -102,7 +102,7 @@ const data = {
       items: [
         {
           title: "Compliance Dashboard",
-          url: "#",
+          url: "/piq-dashboard/compliance-dashboard",
         },
         {
           title: "Compliance Assistant",
