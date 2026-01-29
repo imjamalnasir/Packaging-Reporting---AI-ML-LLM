@@ -45,19 +45,10 @@ import { PackiqActiveReports } from "@/components/PackIQ-Active-Reports"
 export default function ReportBuilder() {
   return (
     <>
-  
-   
-      
-
-
-
-           
-
-
            <CardHeader  className="py-4 flex flex-row items-start justify-between gap-4">
             <div className="space-y-1.5">
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-          Compliance Officer Dashboard
+          Report Builder
           </CardTitle>
           <CardDescription>
             Monitor EPR compliance status and reporting deadlines
