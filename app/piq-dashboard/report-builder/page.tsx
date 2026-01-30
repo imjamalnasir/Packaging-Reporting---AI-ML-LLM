@@ -51,7 +51,7 @@ export default function ReportBuilder() {
           Report Builder
           </CardTitle>
           <CardDescription>
-            Monitor EPR compliance status and reporting deadlines
+            Create a new EPR compliance report
           </CardDescription>
           </div>
           <CardAction>
