@@ -42,10 +42,10 @@ export default function SignInPage() {
         <h1 className="text-2xl font-bold">Sign In Successful!</h1>
         <p>Welcome to your dashboard.</p>
         <div className="mt-4 p-4 border rounded w-1/2 text-center">
-          Empty dashboard / home page
+          Empty dashboard / home pagef
         </div>
       </div>
-    );
+    ); 
   }
 
   return (

@@ -1,4 +1,4 @@
-import { SignIn } from "@/components/packiq/sign-in";
+import { SignIn } from "@/components/packiq/auth/sign-in";
 
 export default function Signin() {
   return (
