@@ -1,3 +1,7 @@
+
+'use client';
+import { useRouter } from 'next/navigation';
+
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -16,14 +20,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 
 export function SignIn({
   className,
   ...props
 }: React.ComponentProps<"div">) {
+  
+  const router = useRouter();
+  
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
           <form className="p-6 md:p-8">
@@ -70,7 +79,7 @@ export function SignIn({
                 <Input id="password" type="password" required />
               </Field>
               <Field>
-                <Button type="submit">Login</Button>           
+                <Button  type="button" onClick={() => router.push('/otp-method')}>Login</Button>           
               </Field>
             </FieldGroup>
           </form>
@@ -84,6 +93,7 @@ export function SignIn({
         </CardContent>
       </Card>
     
+
 
     </div>
   )

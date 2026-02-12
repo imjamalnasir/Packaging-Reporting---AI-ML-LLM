@@ -48,7 +48,7 @@ import {
 
 /* Dialog imports code by jamal Ends*/
 
-export function SignIn({
+export function SignInAll({
   className,
   ...props
 }: React.ComponentProps<"div">) {
@@ -56,6 +56,17 @@ export function SignIn({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Dialog>
       <AlertDialog>
+
+
+  <AlertDialogTrigger asChild>
+    <Button variant="outline">Show Dialog</Button>
+  </AlertDialogTrigger>
+
+  <DialogTrigger asChild>
+      <Button variant="outline">Open Dialog</Button>
+  </DialogTrigger>
+
+
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
           <form className="p-6 md:p-8">
