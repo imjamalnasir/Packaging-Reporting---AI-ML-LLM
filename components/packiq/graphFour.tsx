@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
 const data = [
   { quarter: "Q1", cost2023: 8200, cost2024: 9500 },
@@ -20,6 +21,16 @@ const data = [
 
 export function GraphFour() {
   return (
+    <>
+    <Card>
+      <CardHeader>
+                <CardTitle>Year-over-Year Cost Trend</CardTitle>
+                <CardDescription>
+                  List of recent uploaded files and their status.
+                </CardDescription>
+              </CardHeader>
+              
+                  <CardContent className="p-10" >
     <div className="w-full h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data} barGap={8}>
@@ -45,19 +56,22 @@ export function GraphFour() {
 
           <Bar
             dataKey="cost2023"
-            fill="#94a3b8"
+            fill="#EBB652"
             name="2023"
             radius={[4, 4, 0, 0]}
           />
 
           <Bar
             dataKey="cost2024"
-            fill="#2563eb"
+            fill="#033B55"
             name="2024"
             radius={[4, 4, 0, 0]}
           />
         </BarChart>
       </ResponsiveContainer>
     </div>
+    </CardContent>
+    </Card>
+    </>
   )
 }
