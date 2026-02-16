@@ -1,4 +1,5 @@
 import { OtpMethod } from "@/components/packiq/auth/otp-method";
+import { OtpMethodIntegrated } from "@/components/packiq/auth/otp-method-integrated";
 
 export default function OtpMethodPage(){
 
@@ -8,7 +9,8 @@ export default function OtpMethodPage(){
         
                 <div className=" flex min-h-[calc(100vh-64px)] flex-col items-center justify-center p-6 md:p-10">
                     <div className="w-full max-w-sm md:max-w-1xl">
-                      <OtpMethod/>
+                      {/*<OtpMethod/>*/}
+                      <OtpMethodIntegrated/>
                       </div>
                       </div>
         

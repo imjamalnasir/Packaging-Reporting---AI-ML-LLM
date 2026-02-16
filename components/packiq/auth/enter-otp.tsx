@@ -12,13 +12,17 @@ import {
 } from "@/components/ui/input-otp"
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 
+type Props = {
+  name: string;
+};
  
-export function EnterOtp() {
+export function EnterOtp(props: any) {
   const router = useRouter();
   return (
     <Card>
                 
                 <div className="flex flex-col items-center gap-2 text-center">
+                  
                 <h1 className="text-2xl font-bold">Enter verification code</h1>
                 <p className="text-muted-foreground text-balance">
                   We sent a 6-digit code to your email
@@ -44,7 +48,7 @@ export function EnterOtp() {
 </div>
 
                     <p className="text-muted-foreground text-balance">
-                  Enter the 6-digit code sent to your email.
+                  Enter the 6-digit code sent to your {props.otpmethod}
                 </p>
                                     <Field>
                 <Button type="button" onClick={() => router.push('/select-client')}>Verify</Button>       
