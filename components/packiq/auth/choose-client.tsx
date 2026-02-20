@@ -106,7 +106,7 @@ export default function ChooseClient(){
             <DialogClose asChild>
               <Button variant="outline">Cancel</Button>
             </DialogClose>
-            <Button  type="button" onClick={() => router.push('/auth-complete')} >Confirm & continue</Button>
+            <Button  type="button" onClick={() => router.push('/auth/auth-complete')} >Confirm & continue</Button>
           </DialogFooter>
   </DialogContent>
 </Dialog>

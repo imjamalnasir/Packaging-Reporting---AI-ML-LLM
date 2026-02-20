@@ -95,7 +95,7 @@ export function SignInDynamicValidated({
         throw new Error(data.message)
       }
 
-      router.push("/otp-method")
+      router.push("/auth/otp-method")
 
     } catch (err: any) {
       setServerError(err.message || "Invalid email or password")

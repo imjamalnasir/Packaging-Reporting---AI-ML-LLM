@@ -40,11 +40,11 @@ export function OtpMethodIntegrated() {
       }
 
       console.log("OTP Response:", data)
-      alert(data)
+    
 
       // Navigate to enter otp page
       // ⚠️ Do NOT pass OTP in production
-     router.push(`/enter-otp?method=${method}`)
+     router.push(`/auth/enter-otp?method=${method}&otp=${data.otp}`)
 
     } catch (error) {
       console.error("Error sending OTP:", error)
