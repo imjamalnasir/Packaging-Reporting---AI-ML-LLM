@@ -1,16 +1,16 @@
 
 'use client'
 
-import { useSearchParams } from "next/navigation"
+//import { useSearchParams } from "next/navigation"
 
 import { EnterOtp } from "@/components/packiq/auth/enter-otp";
 import { EnterOtpIntegrated } from "@/components/packiq/auth/enter-otp-integrated";
 
 export default function EnterOtpPage (){
 
-    const searchParams = useSearchParams()
-  const method = searchParams.get("method")
-  const otp = searchParams.get("otp")
+//const searchParams = useSearchParams()
+  //const method = searchParams.get("method") ?? ""
+  //const otp = searchParams.get("otp") ?? ""
 
     return(
 
@@ -19,7 +19,9 @@ export default function EnterOtpPage (){
                             <div className="w-full max-w-sm md:max-w-1xl">
                                
                               {/*<EnterOtp otpmethod={method} otp={otp}/>*/}
-                              <EnterOtpIntegrated otpmethod={method} otp={otp}/>
+                              {/*<EnterOtpIntegrated {/*otpmethod={method} otp={otp}}/>*/}  
+                              <EnterOtpIntegrated/>                              
+                          
                               </div>
                               </div>
         </>

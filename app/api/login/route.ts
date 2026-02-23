@@ -4,7 +4,7 @@ export async function POST(req: Request) {
   const { email, password } = await req.json()
 
   // Replace with DB check
-  if (email === "admin@example.com" && password === "123456") {
+  if (email === "admin@packiq.com" && password === "admin123") {
     return NextResponse.json({ success: true })
   }
 

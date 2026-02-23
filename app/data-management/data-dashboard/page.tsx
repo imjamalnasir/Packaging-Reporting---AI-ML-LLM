@@ -75,7 +75,7 @@ export default function DataDashboard() {
           
           <DataDashboardMetricCards/>
           <DataDashboardRecentUpload/>
-          <PackiqRecentUpload/> 
+         
           </CardContent>
           
         

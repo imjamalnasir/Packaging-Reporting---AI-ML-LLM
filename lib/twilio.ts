@@ -1,4 +1,4 @@
-import Twilio from "twilio";
+import { Twilio } from "twilio";
 
 export const twilio = new Twilio(
   process.env.TWILIO_ACCOUNT_SID!,

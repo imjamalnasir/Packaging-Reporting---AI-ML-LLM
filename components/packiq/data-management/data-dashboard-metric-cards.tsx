@@ -23,7 +23,7 @@ export function DataDashboardMetricCards() {
       <div className="grid grid-cols-4 gap-4 py-4 ">
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Critical Missing Fields</CardDescription>
+          <CardTitle>Critical Missing Fields</CardTitle>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             12 Fields
           </CardTitle>
@@ -40,7 +40,7 @@ export function DataDashboardMetricCards() {
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Records Validated</CardDescription>
+          <CardTitle>Records Validated</CardTitle>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             1,842
           </CardTitle>
@@ -57,7 +57,7 @@ export function DataDashboardMetricCards() {
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Pending Review</CardDescription>
+          <CardTitle>Pending Review</CardTitle>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             34
           </CardTitle>
@@ -73,7 +73,7 @@ export function DataDashboardMetricCards() {
       </Card>
       <Card className="@container/card">
         <CardHeader>
-          <CardDescription>Validation Errors</CardDescription>
+          <CardTitle>Validation Errors</CardTitle>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             8
           </CardTitle>
