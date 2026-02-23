@@ -206,7 +206,7 @@ export function SignInDynamicValidated({
           {/* IMAGE SIDE */}
           <div className="bg-muted relative hidden md:block">
             <img
-              src="/signin-img.png"
+              src="/sign-in-img.png"
               alt="Login visual"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />
