@@ -18,7 +18,7 @@ interface EnterOtpIntegratedProps {
   otpmethod: string
 }
 
-export function EnterOtpIntegrated(props: EnterOtpIntegratedProps) {
+export function EnterOtpGetToken(props: EnterOtpIntegratedProps) {
   const router = useRouter()
 
   const [otp, setOtp] = useState("")

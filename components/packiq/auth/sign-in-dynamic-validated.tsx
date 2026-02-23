@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
@@ -210,6 +210,7 @@ export function SignInDynamicValidated({
               alt="Login visual"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />
+
           </div>
 
         </CardContent>

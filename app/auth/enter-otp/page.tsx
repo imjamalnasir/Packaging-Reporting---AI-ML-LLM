@@ -4,6 +4,7 @@
 //import { useSearchParams } from "next/navigation"
 
 import { EnterOtp } from "@/components/packiq/auth/enter-otp";
+import { EnterOtpGetToken } from "@/components/packiq/auth/enter-otp-get-token";
 import { EnterOtpIntegrated } from "@/components/packiq/auth/enter-otp-integrated";
 
 export default function EnterOtpPage (){
@@ -20,7 +21,8 @@ export default function EnterOtpPage (){
                                
                               {/*<EnterOtp otpmethod={method} otp={otp}/>*/}
                               {/*<EnterOtpIntegrated {/*otpmethod={method} otp={otp}}/>*/}  
-                              <EnterOtpIntegrated/>                              
+                              <EnterOtpIntegrated/>
+                                                          
                           
                               </div>
                               </div>
