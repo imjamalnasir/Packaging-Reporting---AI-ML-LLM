@@ -34,7 +34,8 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar"
-import { NavMainPackIQ } from "./nav-main-packiq"
+
+import { DataManagmentSideBarNav } from "./data-managment-sidebar-nav";
 
 // This is sample data.
 const data = {
@@ -74,6 +75,7 @@ const data = {
       items: [
         {
           title: "Data Dashboard",
+          icon:Database,
           url: "/data-management/data-dashboard",
         },
         {
@@ -190,7 +192,7 @@ const data = {
   ],
 }
 
-export function AppSidebarPackIQ({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function DataManagmentSideBar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
  
 
@@ -203,7 +205,7 @@ export function AppSidebarPackIQ({ ...props }: React.ComponentProps<typeof Sideb
         { /*<TeamSwitcher teams={data.teams} />*/}
       </SidebarHeader>
       <SidebarContent>
-        <NavMainPackIQ items={data.navMain}/>
+        <DataManagmentSideBarNav items={data.navMain}/>
         { /* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
