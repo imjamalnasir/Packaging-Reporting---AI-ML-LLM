@@ -60,10 +60,11 @@ export function EnterOtpGetToken(props: EnterOtpIntegratedProps) {
         }
 
         setMessage(data.message || "OTP verified successfully ✅")
+        console.log("this is jwt token"+ data.token)
 
         // Redirect after success
         setTimeout(() => {
-          router.push("/auth/select-client")
+          router.push("#")
         }, 800)
       } else {
         setError(data.message || "Invalid OTP")
@@ -106,7 +107,7 @@ export function EnterOtpGetToken(props: EnterOtpIntegratedProps) {
   return (
     <Card>
       <div className="flex flex-col items-center gap-2 text-center">
-        <h1 className="text-2xl font-bold">Enter verification code</h1>
+        <h1 className="text-2xl font-bold">Enter verification code - JWT</h1>
         <p className="text-muted-foreground text-balance">
           We sent a 6-digit code via {props.otpmethod}
         </p>

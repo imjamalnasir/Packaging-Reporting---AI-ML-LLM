@@ -18,7 +18,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 export function OtpMethodIntegrated() {
   const router = useRouter()
 
-  const [method, setMethod] = useState("SMS")
+  const [otpmethod, setOtpmethod] = useState("SMS")
   const [loading, setLoading] = useState(false)
 
   const handleSend = async () => {
@@ -30,7 +30,7 @@ export function OtpMethodIntegrated() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ method }),
+        body: JSON.stringify({ otpmethod }),
       })
 
       const data = await res.json()
@@ -44,7 +44,8 @@ export function OtpMethodIntegrated() {
 
       // Navigate to enter otp page
       // ⚠️ Do NOT pass OTP in production
-     router.push(`/auth/enter-otp?method=${method}&otp=${data.otp}`)
+     //router.push(`/auth/enter-otp?method=${method}&otp=${data.otp}`)
+      router.push(`/auth/enter-otp?method=${otpmethod}`)
 
     } catch (error) {
       console.error("Error sending OTP:", error)
@@ -68,8 +69,8 @@ export function OtpMethodIntegrated() {
           <FieldGroup className="max-w-sm space-y-6">
             
             <RadioGroup
-              value={method}
-              onValueChange={(value) => setMethod(value)}
+              value={otpmethod}
+              onValueChange={(value) => setOtpmethod(value)}
             >
 
               <FieldLabel>
